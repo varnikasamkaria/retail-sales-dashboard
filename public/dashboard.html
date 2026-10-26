@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Retail Sales</title><link rel="icon" href="img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="dashboard">
+<header class="nav"><div class="wrap"><a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#4f46e5"/><rect x="9" y="22" width="5" height="10" rx="1.5" fill="#fff"/><rect x="17.5" y="14" width="5" height="18" rx="1.5" fill="#5eead4"/><rect x="26" y="8" width="5" height="24" rx="1.5" fill="#fbbf24"/></svg><span>Retail Sales<small>Analytics Dashboard</small></span></a><button class="toggle" aria-label="Menu">☰</button><nav class="menu"><a href="index.html">Home</a><a href="about.html">About Project</a><a href="dashboard.html" class="active">Dashboard</a><a href="insights.html">Insights</a><a href="method.html">Data &amp; Method</a><a href="me.html">About Me</a><a href="contact.html">Contact</a></nav></div></header>
+<main><div class="wrap"><div class="page-title"><h1>Retail Sales Dashboard</h1><p>Interactive charts built from the project data. Choose filters to explore.</p></div>
+<section><div class="card filters"><label>Store<select id="f-store"></select></label><label>Category<select id="f-category"></select></label><label>Membership<select id="f-membership"></select></label><label>Month<select id="f-month"></select></label><button id="reset" class="btn alt" type="button">Reset filters</button></div></section>
+<div id="loading" class="loading">Loading data…</div><div id="empty" class="note" style="display:none">No orders match these filters.</div>
+<section><div id="kpis" class="grid g5"></div></section>
+<section class="grid g2"><div class="card"><h3>Monthly revenue and profit</h3><p class="sub">Total rupees each month</p><div class="chart-box"><canvas id="c-month"></canvas></div></div><div class="card"><h3>Category split</h3><p class="sub">Share of revenue</p><div class="chart-box"><canvas id="c-cat"></canvas></div></div></section>
+<section class="grid g2"><div class="card"><h3>Cost vs Profit</h3><p class="sub">What each month is made of</p><div class="chart-box"><canvas id="c-cost"></canvas></div></div><div class="card"><h3>Revenue by store</h3><p class="sub">Highest first</p><div class="chart-box"><canvas id="c-store"></canvas></div></div></section>
+<section class="grid g2"><div class="card"><h3>Revenue by membership tier</h3><p class="sub">Total revenue per tier</p><div class="chart-box"><canvas id="c-mem"></canvas></div></div><div class="card"><h3>Top 10 products</h3><p class="sub">Highest total profit</p><div class="chart-box"><canvas id="c-prod"></canvas></div></div></section></div></main>
+<footer><div class="wrap">© 2026 <b>Varnika Samkaria</b> · Retail Sales and Inventory Intelligence project · All figures are calculated from the project data file.</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/app.js"></script></body></html>
